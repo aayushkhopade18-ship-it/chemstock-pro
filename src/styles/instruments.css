@@ -1,0 +1,176 @@
+.instruments-page {
+  padding: 28px;
+  background: #f7f8fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.instruments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.instruments-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.instruments-header p {
+  margin: 7px 0 0;
+  color: #6b7280;
+}
+
+.add-instrument-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.instrument-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.stat-card span {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.stat-card strong {
+  font-size: 28px;
+  color: #111827;
+}
+
+.instrument-toolbar {
+  display: flex;
+  gap: 12px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.instrument-toolbar input,
+.instrument-toolbar select {
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.instrument-toolbar input {
+  flex: 1;
+}
+
+.instruments-table-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+.instruments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.instruments-table th,
+.instruments-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.instruments-table th {
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.instruments-table td {
+  color: #374151;
+  font-size: 14px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.in-use {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-badge.maintenance {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.view-btn {
+  border: 1px solid #2563eb;
+  background: white;
+  color: #2563eb;
+  padding: 7px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.no-results {
+  text-align: center !important;
+  padding: 35px !important;
+  color: #6b7280;
+}
+
+@media (max-width: 980px) {
+  .instrument-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .instruments-page {
+    padding: 15px;
+  }
+
+  .instruments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .instrument-toolbar {
+    flex-direction: column;
+  }
+
+  .instrument-stats {
+    grid-template-columns: 1fr;
+  }
+}

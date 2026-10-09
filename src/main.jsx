@@ -1,21 +1,27 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 import App from "./App";
-import "./index.css";
 
+import { AuthProvider } from "./context/AuthContext";
 import { ChemicalProvider } from "./context/ChemicalContext";
 import { IssueProvider } from "./context/IssueContext";
+import { InstrumentProvider } from "./context/InstrumentContext";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
+import "./index.css";
+
+ReactDOM.createRoot(
+  document.getElementById("root")
+).render(
+  <React.StrictMode>
+    <AuthProvider>
       <ChemicalProvider>
         <IssueProvider>
-          <App />
+          <InstrumentProvider>
+            <App />
+          </InstrumentProvider>
         </IssueProvider>
       </ChemicalProvider>
-    </BrowserRouter>
-  </StrictMode>
+    </AuthProvider>
+  </React.StrictMode>
 );
